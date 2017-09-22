@@ -35,3 +35,10 @@ jobs:
 
       # run tests!
       - run: yarn test
+      # deploy to docker hub
+      - deploy:
+          name: Maybe Deploy
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              $DOCKER_HUB_TRIGGER
+            fi
