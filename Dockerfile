@@ -16,4 +16,4 @@ RUN cd /build; npm install
 
 EXPOSE 8080
 
-CMD cd /build && node ./src/app.js
+CMD cd /build && node ./src/index.js
